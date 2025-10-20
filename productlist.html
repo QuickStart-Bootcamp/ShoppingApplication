@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Font */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Slate 50 */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="bg-white shadow-md p-4 sticky top-0 z-10">
+        <div class="container mx-auto">
+            <h1 class="text-3xl font-extrabold text-gray-800">
+                Todays Tech Deals
+            </h1>
+            <p class="text-sm text-gray-500 mt-1">
+                Hot items To make your home life easier today!
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="container mx-auto p-6 md:p-12">
+
+        <h2 class="text-2xl font-semibold text-gray-700 mb-6 border-b pb-2">Items to consider</h2>
+
+        <!-- 
+            FLEXBOX CONTAINER 
+            
+            - flex: Enables the flex container
+            - flex-wrap: Allows items to wrap onto new lines on smaller screens
+            - justify-center: Centers items horizontally
+            - gap-6: Adds space between items (6 units)
+            - items-stretch: Ensures items fill the height of the container
+        -->
+        <div class="flex flex-wrap justify-center gap-6">
+
+            <div class="flex-grow max-w-sm bg-indigo-600 text-white p-8 rounded-2xl shadow-xl transition transform hover:scale-[1.02] duration-300 w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)]">
+                <img src="./images/CoveHome.jpg">
+                <h3 class="font-bold mb-3">Cove Home Security</h3>
+                <p class="text-white-200 mb-4">
+                    $324.99
+                </p>
+                
+            </div>
+
+            
+            <div class="flex-grow max-w-sm bg-white border border-gray-200 p-8 rounded-2xl shadow-lg transition transform hover:shadow-2xl duration-300 w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)]">
+                <img src="./images/yalehome.jpeg">
+                <h3 class="font-bold text-gray-900 mb-3"> Yale Home Lock</h3>
+                <p class="text-gray-600 mb-4"> $299    </p>
+                
+            </div>
+
+            <div class="flex-grow max-w-sm bg-lime-500 text-gray-900 p-8 rounded-2xl shadow-xl transition transform hover:rotate-1 duration-300 w-full sm:w-full lg:w-[calc(33.333%-1.5rem)]">
+                <img src="./images/nest.jpeg">
+                <h3 class="font-bold mb-3">Nest Learning Thermostat</h3>
+                <p class="text-lime-900 mb-4"> $279 </p> 
+            </div>
+            
+            <div class="flex-grow max-w-sm bg-rose-500 text-white p-8 rounded-2xl shadow-xl transition transform hover:rotate-1 duration-300 w-full sm:w-full lg:w-[calc(33.333%-1.5rem)] ">
+                <img src="./images/starlink.jpeg">
+                <h3 class="font-bold mb-3">Star Link Mini Kit</h3>
+                <p class="text-rose-200 mb-4">$299</p>
+            </div>
+        </div>
+
+    </main>
+    
+</body>
+</html>

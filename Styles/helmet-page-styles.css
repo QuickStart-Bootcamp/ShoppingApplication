@@ -1,0 +1,44 @@
+.trade-winds-regular {
+  font-family: "Trade Winds", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 45px;
+}
+
+
+.container {
+   display: grid;
+   grid-template-columns: 50% 50%; 
+}
+
+
+#photo {
+    grid-column-start: 1;
+    width: 90%;
+}
+
+
+#information {
+    grid-column-start: 2;
+    
+}
+
+
+#size, #color {
+    width: 50%;
+    font-size: 16px;
+}
+
+
+.price {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+
+.cart-button {
+    margin-top: 10px;
+    background-color: red;
+    width: 50%;
+    font-size: 25px;
+}

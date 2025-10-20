@@ -1,13 +1,174 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Create Account • LuxeCart</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <h1>Registration</h1>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis recusandae voluptates ducimus, tempora esse rem distinctio ipsam molestias maiores eligendi dolorum porro nisi accusantium iure, fugit exercitationem tenetur deleniti soluta provident in deserunt corrupti, atque consequuntur. Maxime aspernatur iusto aliquam! Consequatur officiis tenetur eligendi adipisci consequuntur sed doloremque voluptatibus laboriosam error ipsum! Corporis odit tempore quae, molestiae quod voluptatum qui, repudiandae dolores, iure vero deleniti iste veniam quisquam molestias placeat voluptate nihil eveniet quas facilis voluptatibus quasi obcaecati id amet rem. Aliquid alias culpa facilis omnis laboriosam fugiat assumenda a esse impedit labore fugit, ea dolorem voluptas. Quisquam, officiis nostrum?</p>
+  <!-- Your existing header / hamburger / theme-toggle goes here -->
+
+  <main aria-labelledby="page-title">
+    <section class="hero">
+      <h1 id="page-title">Create your account</h1>
+      <p>Save favorites, track orders, and check out faster.</p>
+    </section>
+
+    <section class="form-section" aria-label="Registration form">
+      <form id="registrationForm" novalidate>
+        <!-- Contact -->
+        <fieldset class="card">
+          <legend>Contact information</legend>
+
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="firstName">First name</label>
+              <input id="firstName" name="given-name" type="text" autocomplete="given-name" required />
+            </div>
+            <div class="form-row">
+              <label for="lastName">Last name</label>
+              <input id="lastName" name="family-name" type="text" autocomplete="family-name" required />
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required />
+              <p class="help">We’ll send a verification email.</p>
+            </div>
+            <div class="form-row">
+              <label for="phone">Mobile (optional)</label>
+              <input id="phone" name="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="(555) 123-4567" />
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Security -->
+        <fieldset class="card">
+          <legend>Security</legend>
+
+          <div class="form-grid">
+            <div class="form-row password-wrap">
+              <label for="password">Password</label>
+              <input id="password" name="new-password" type="password" autocomplete="new-password" minlength="8" required aria-describedby="pwHelp pwError" />
+              <button type="button" class="toggle-pass" aria-controls="password" aria-label="Show password">Show</button>
+              <p id="pwHelp" class="help">Use 8+ characters with letters, numbers, and a symbol.</p>
+              <meter id="pwMeter" min="0" low="2" high="3" optimum="4" max="4" value="0"></meter>
+              <p id="pwError" class="error" role="alert" hidden></p>
+            </div>
+
+            <div class="form-row">
+              <label for="confirm">Confirm password</label>
+              <input id="confirm" name="confirm-password" type="password" autocomplete="new-password" required aria-describedby="confirmError" />
+              <p id="confirmError" class="error" role="alert" hidden></p>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Address (optional) -->
+        <fieldset class="card">
+          <legend>Shipping address</legend>
+
+          <div class="form-row">
+            <label for="street">Street address</label>
+            <input id="street" name="address-line1" type="text" autocomplete="address-line1" />
+          </div>
+
+          <div class="form-grid thirds">
+            <div class="form-row">
+              <label for="city">City</label>
+              <input id="city" name="address-level2" type="text" autocomplete="address-level2" />
+            </div>
+            <div class="form-row">
+              <label for="state">State</label>
+              <input id="state" name="address-level1" type="text" autocomplete="address-level1" />
+            </div>
+            <div class="form-row">
+              <label for="zip">ZIP</label>
+              <input id="zip" name="postal-code" type="text" inputmode="numeric" autocomplete="postal-code" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="country">Country/Region</label>
+            <select id="country" name="country" autocomplete="country">
+              <option value="">Select a country</option>
+              <option value="US">United States</option>
+              <option value="CA">Canada</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <!-- Preferences -->
+        <fieldset class="card">
+          <legend>Preferences</legend>
+
+          <label class="checkbox">
+            <input id="marketing" name="marketing" type="checkbox" />
+            <span>Email me exclusive offers (optional)</span>
+          </label>
+
+          <label class="checkbox">
+            <input id="terms" name="terms" type="checkbox" required />
+            <span>I agree to the <a href="#">Terms</a> and <a href="#">Privacy</a>.</span>
+          </label>
+        </fieldset>
+
+        <div class="form-actions">
+          <p class="muted">Already have an account? <a href="login.html">Sign in</a>.</p>
+          <button id="submitBtn" class="add-to-cart-btn" type="submit">Create account</button>
+        </div>
+
+        <p id="formMessage" class="success" role="status" aria-live="polite" hidden></p>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    // Show/Hide password
+    const toggle = document.querySelector('.toggle-pass');
+    const pw = document.getElementById('password');
+    toggle.addEventListener('click', () => {
+      const show = pw.type === 'password';
+      pw.type = show ? 'text' : 'password';
+      toggle.textContent = show ? 'Hide' : 'Show';
+      toggle.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
+    });
+
+    // Strength meter
+    const meter = document.getElementById('pwMeter');
+    const pwError = document.getElementById('pwError');
+    function score(v){let s=0;if(!v)return 0;if(v.length>=8)s++;if(/[A-Z]/.test(v)&&/[a-z]/.test(v))s++;if(/\d/.test(v))s++;if(/[^A-Za-z0-9]/.test(v))s++;return Math.min(s,4)}
+    pw.addEventListener('input',()=>{
+      const sc = score(pw.value);
+      meter.value = sc;
+      const msgs=['Too weak','Weak','Okay','Good','Strong'];
+      pwError.hidden = sc>=2;
+      if(!pwError.hidden) pwError.textContent = `Password strength: ${msgs[sc]}.`;
+      confirm.dispatchEvent(new Event('input'));
+    });
+
+    // Confirm match
+    const confirm = document.getElementById('confirm');
+    const confirmError = document.getElementById('confirmError');
+    confirm.addEventListener('input',()=>{
+      const ok = confirm.value && confirm.value === pw.value;
+      confirmError.hidden = ok;
+      if(!ok) confirmError.textContent = 'Passwords do not match.';
+    });
+
+    // Submit demo
+    const form = document.getElementById('registrationForm');
+    const formMessage = document.getElementById('formMessage');
+    form.addEventListener('submit',(e)=>{
+      e.preventDefault();
+      if(!form.checkValidity()){ form.reportValidity(); return; }
+      formMessage.hidden = false;
+      formMessage.textContent = 'Account created! Check your email to verify your address.';
+      form.reset(); meter.value = 0; pwError.hidden = true; confirmError.hidden = true;
+    });
+  </script>
 </body>
 </html>

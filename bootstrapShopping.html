@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shop Until You Drop — Product List</title>
+
+  <!-- Bootstrap 5.3.8 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous"
+  />
+  <!-- Your project stylesheet -->
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- Page-only styles (feel free to move these into style.css) -->
+  <style>
+    :root{
+      --bg:#0b0f19;
+      --surface: rgba(255,255,255,0.08);
+      --surface-hover: rgba(255,255,255,0.12);
+      --border: rgba(255,255,255,0.14);
+      --text:#e6e9ef;
+    }
+    body{
+      background:
+        radial-gradient(1000px 600px at 10% -10%, #6ddcff22, transparent 60%),
+        radial-gradient(1000px 600px at 110% 10%, #f6f3ff1a, transparent 60%),
+        var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    .navbar.glassy{
+      background: rgba(10,14,22,0.6) !important;
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .card.glassy{
+      background: var(--surface);
+      border: 1px solid var(--border);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+      transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
+    }
+    .card.glassy:hover{
+      transform: translateY(-4px);
+      background: var(--surface-hover);
+      box-shadow: 0 18px 44px rgba(0,0,0,0.45);
+    }
+    .card-title{
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: .2px;
+      margin: 0;
+    }
+    .ratio > img{
+      object-fit: cover;
+      filter: saturate(1.05) contrast(1.02);
+    }
+    .page-header h1{
+      font-size: clamp(1.25rem, 2.5vw + .5rem, 2rem);
+      margin: 0;
+    }
+    .page-header .lead{
+      color: #c8cbd3;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg navbar-dark glassy sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="#">Shop Until You Drop</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header border-bottom border-light-subtle">
+    <div class="container py-4">
+      <div class="d-flex flex-column flex-md-row align-items-md-end gap-2 justify-content-between">
+        <h1 class="fw-semibold">Product List</h1>
+        <p class="lead">Sleek, responsive grid — 1× on mobile, 2× on tablet, 4× on desktop.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- PRODUCTS GRID -->
+  <main class="container py-5">
+    <!-- Use row-cols utilities to control columns per breakpoint -->
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+      <!-- Product 1 -->
+      <div class="col">
+        <div class="card glassy h-100">
+          <div class="ratio ratio-1x1">
+            <img src="https://picsum.photos/seed/p1/800/800" class="rounded-top" alt="Product 1" />
+          </div>
+          <div class="card-body d-flex align-items-center justify-content-between">
+            <h2 class="card-title">Aurora Headphones</h2>
+          </div>
+        </div>
+      </div>
+      <!-- Product 2 -->
+      <div class="col">
+        <div class="card glassy h-100">
+          <div class="ratio ratio-1x1">
+            <img src="https://picsum.photos/seed/p2/800/800" class="rounded-top" alt="Product 2" />
+          </div>
+          <div class="card-body d-flex align-items-center justify-content-between">
+            <h2 class="card-title">Nimbus Backpack</h2>
+          </div>
+        </div>
+      </div>
+      <!-- Product 3 -->
+      <div class="col">
+        <div class="card glassy h-100">
+          <div class="ratio ratio-1x1">
+            <img src="https://picsum.photos/seed/p3/800/800" class="rounded-top" alt="Product 3" />
+          </div>
+          <div class="card-body d-flex align-items-center justify-content-between">
+            <h2 class="card-title">Prism Sunglasses</h2>
+          </div>
+        </div>
+      </div>
+      <!-- Product 4 -->
+      <div class="col">
+        <div class="card glassy h-100">
+          <div class="ratio ratio-1x1">
+            <img src="https://picsum.photos/seed/p4/800/800" class="rounded-top" alt="Product 4" />
+          </div>
+          <div class="card-body d-flex align-items-center justify-content-between">
+            <h2 class="card-title">Eclipse Smartwatch</h2>
+          </div>
+        </div>
+      </div>
+      <!-- Product 5 -->
+      <div class="col">
+        <div class="card glassy h-100">
+          <div class="ratio ratio-1x1">
+            <img src="https://picsum.photos/seed/p5/800/800" class="rounded-top" alt="Product 5" />
+          </div>
+          <div class="card-body d-flex align-items-center justify-content-between">
+            <h2 class="card-title">Vertex Sneakers</h2>
+          </div>
+        </div>
+      </div>
+      <!-- Product 6 -->
+      <div class="col">
+        <div class="card glassy h-100">
+          <div class="ratio ratio-1x1">
+            <img src="https://picsum.photos/seed/p6/800/800" class="rounded-top" alt="Product 6" />
+          </div>
+          <div class="card-body d-flex align-items-center justify-content-between">
+            <h2 class="card-title">Halo Desk Lamp</h2>
+          </div>
+        </div>
+      </div>
+      <!-- Product 7 -->
+      <div class="col">
+        <div class="card glassy h-100">
+          <div class="ratio ratio-1x1">
+            <img src="https://picsum.photos/seed/p7/800/800" class="rounded-top" alt="Product 7" />
+          </div>
+          <div class="card-body d-flex align-items-center justify-content-between">
+            <h2 class="card-title">Flux Water Bottle</h2>
+          </div>
+        </div>
+      </div>
+      <!-- Product 8 -->
+      <div class="col">
+        <div class="card glassy h-100">
+          <div class="ratio ratio-1x1">
+            <img src="https://picsum.photos/seed/p8/800/800" class="rounded-top" alt="Product 8" />
+          </div>
+          <div class="card-body d-flex align-items-center justify-content-between">
+            <h2 class="card-title">Orbit Bluetooth Speaker</h2>
+          </div>
+        </div>
+      </div>
+      <!-- Product 9 -->
+      <div class="col">
+        <div class="card glassy h-100">
+          <div class="ratio ratio-1x1">
+            <img src="https://picsum.photos/seed/p9/800/800" class="rounded-top" alt="Product 9" />
+          </div>
+          <div class="card-body d-flex align-items-center justify-content-between">
+            <h2 class="card-title">Zen Yoga Mat</h2>
+          </div>
+        </div>
+      </div>
+      <!-- Product 10 -->
+      <div class="col">
+        <div class="card glassy h-100">
+          <div class="ratio ratio-1x1">
+            <img src="https://picsum.photos/seed/p10/800/800" class="rounded-top" alt="Product 10" />
+          </div>
+          <div class="card-body d-flex align-items-center justify-content-between">
+            <h2 class="card-title">Peak Trail Jacket</h2>
+          </div>
+        </div>
+      </div>
+      <!-- Product 11 -->
+      <div class="col">
+        <div class="card glassy h-100">
+          <div class="ratio ratio-1x1">
+            <img src="https://picsum.photos/seed/p11/800/800" class="rounded-top" alt="Product 11" />
+          </div>
+          <div class="card-body d-flex align-items-center justify-content-between">
+            <h2 class="card-title">Volt Phone Case</h2>
+          </div>
+        </div>
+      </div>
+      <!-- Product 12 -->
+      <div class="col">
+        <div class="card glassy h-100">
+          <div class="ratio ratio-1x1">
+            <img src="https://picsum.photos/seed/p12/800/800" class="rounded-top" alt="Product 12" />
+          </div>
+          <div class="card-body d-flex align-items-center justify-content-between">
+            <h2 class="card-title">Atlas Travel Mug</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-5 border-top border-light-subtle">
+    <div class="container text-center text-secondary">
+      <small>&copy; <span id="year"></span> Shop Until You Drop</small>
+    </div>
+  </footer>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-tRBM3gwieH9S4oWcD2Qf3mQJMtT1i9c+1aRWzCjG8bOQY+S8a2TNn1yM0LxJr1QY"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

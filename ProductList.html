@@ -1,257 +1,400 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shop Until You Drop — Product List</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shop Until You Drop — Product List</title>
 
-  <!-- Bootstrap 5.3.8 CSS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-    crossorigin="anonymous"
-  />
-  <!-- Your project stylesheet -->
-  <link rel="stylesheet" href="style.css"/>
+    <!-- Bootstrap 5.3.8 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <!-- Your project stylesheet -->
+    <link rel="stylesheet" href="style.css" />
 
-  <!-- Page-only styles (feel free to move these into style.css) -->
-  <style>
-    :root{
-      --bg:#0b0f19;
-      --surface: rgba(255,255,255,0.08);
-      --surface-hover: rgba(255,255,255,0.12);
-      --border: rgba(255,255,255,0.14);
-      --text:#e6e9ef;
-    }
-    body{
-      background:
-        radial-gradient(1000px 600px at 10% -10%, #6ddcff22, transparent 60%),
-        radial-gradient(1000px 600px at 110% 10%, #f6f3ff1a, transparent 60%),
-        var(--bg);
-      color: var(--text);
-      min-height: 100vh;
-    }
-    .navbar.glassy{
-      background: rgba(10,14,22,0.6) !important;
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-    .card.glassy{
-      background: var(--surface);
-      border: 1px solid var(--border);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
-      transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
-    }
-    .card.glassy:hover{
-      transform: translateY(-4px);
-      background: var(--surface-hover);
-      box-shadow: 0 18px 44px rgba(0,0,0,0.45);
-    }
-    .card-title{
-      font-weight: 600;
-      font-size: 1rem;
-      letter-spacing: .2px;
-      margin: 0;
-    }
-    .ratio > img{
-      object-fit: cover;
-      filter: saturate(1.05) contrast(1.02);
-    }
-    .page-header h1{
-      font-size: clamp(1.25rem, 2.5vw + .5rem, 2rem);
-      margin: 0;
-    }
-    .page-header .lead{
-      color: #c8cbd3;
-      margin: 0;
-    }
-  </style>
-</head>
-<body>
-  <!-- NAV -->
-  <nav class="navbar navbar-expand-lg navbar-dark glassy sticky-top">
-    <div class="container">
-      <a class="navbar-brand fw-semibold" href="#">Shop Until You Drop</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <!-- Page-only styles (feel free to move these into style.css) -->
+    <style>
+      :root {
+        --bg: #0b0f19;
+        --surface: rgba(255, 255, 255, 0.08);
+        --surface-hover: rgba(255, 255, 255, 0.12);
+        --border: rgba(255, 255, 255, 0.14);
+        --text: #e6e9ef;
+      }
+      body {
+        background: radial-gradient(1000px 600px at 10% -10%, #6ddcff22, transparent 60%),
+          radial-gradient(1000px 600px at 110% 10%, #f6f3ff1a, transparent 60%), var(--bg);
+        color: var(--text);
+        min-height: 100vh;
+      }
+      .navbar.glassy {
+        background: rgba(10, 14, 22, 0.6) !important;
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .card.glassy {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+        transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+      }
+      .card.glassy:hover {
+        transform: translateY(-4px);
+        background: var(--surface-hover);
+        box-shadow: 0 18px 44px rgba(0, 0, 0, 0.45);
+      }
+      .card-title {
+        font-weight: 600;
+        font-size: 1rem;
+        letter-spacing: 0.2px;
+        margin: 0;
+      }
+      .ratio > img {
+        object-fit: cover;
+        filter: saturate(1.05) contrast(1.02);
+      }
+      .page-header h1 {
+        font-size: clamp(1.25rem, 2.5vw + 0.5rem, 2rem);
+        margin: 0;
+      }
+      .page-header .lead {
+        color: #c8cbd3;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg navbar-dark glassy sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="#">Shop Until You Drop</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-        </ul>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- PAGE HEADER -->
-  <header class="page-header border-bottom border-light-subtle">
-    <div class="container py-4">
-      <div class="d-flex flex-column flex-md-row align-items-md-end gap-2 justify-content-between">
-        <h1 class="fw-semibold">Product List</h1>
-        <p class="lead">Sleek, responsive grid — 1× on mobile, 2× on tablet, 4× on desktop.</p>
+    <!-- PAGE HEADER -->
+    <header class="page-header border-bottom border-light-subtle">
+      <div class="container py-4">
+        <div
+          class="d-flex flex-column flex-md-row align-items-md-end gap-2 justify-content-between"
+        >
+          <h1 class="fw-semibold">Product List</h1>
+          <p class="lead">Sleek, responsive grid — 1× on mobile, 2× on tablet, 4× on desktop.</p>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- PRODUCTS GRID -->
-  <main class="container py-5">
-    <!-- Use row-cols utilities to control columns per breakpoint -->
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-      <!-- Product 1 -->
-      <div class="col">
-        <div class="card glassy h-100">
-          <div class="ratio ratio-1x1">
-            <img src="https://picsum.photos/seed/p1/800/800" class="rounded-top" alt="Product 1" />
+    <!-- PRODUCTS GRID -->
+    <main class="container py-5">
+      <!-- Use row-cols utilities to control columns per breakpoint -->
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <!-- Product 1: Apple iPhone 15 Pro -->
+        <div class="col">
+          <div class="card glassy h-100">
+            <div class="ratio ratio-1x1">
+              <img
+                src="https://res.cloudinary.com/spectrumobile/image/upload/Spectrum%20Mobile/Apple/iPhone17/iPhone-17-Pro-Max-Deep-Blue-256GB-HERO.png"
+                class="rounded-top"
+                alt="Apple iPhone 15 Pro"
+              />
+            </div>
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="card-title">Apple iPhone 15 Pro</h3>
+                <p class="card-text text-secondary">Model: A2848</p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <span class="fw-bold fs-5">$1,399.00</span>
+                <button class="btn btn-primary btn-sm">Add to Cart</button>
+              </div>
+            </div>
           </div>
-          <div class="card-body d-flex align-items-center justify-content-between">
-            <h2 class="card-title">Aurora Headphones</h2>
+        </div>
+        <!-- Product 2: Samsung Galaxy S24 Ultra -->
+        <div class="col">
+          <div class="card glassy h-100">
+            <div class="ratio ratio-1x1">
+              <img
+                src="https://m.media-amazon.com/images/I/71WcjsOVOmL._AC_UF894,1000_QL80_.jpg"
+                class="rounded-top"
+                alt="Samsung Galaxy S24 Ultra"
+              />
+            </div>
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="card-title">Samsung Galaxy S24 Ultra</h3>
+                <p class="card-text text-secondary">Model: SM-S928B</p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <span class="fw-bold fs-5">$1,299.00</span>
+                <button class="btn btn-primary btn-sm">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Product 3: Sony WH-1000XM5 Headphones -->
+        <div class="col">
+          <div class="card glassy h-100">
+            <div class="ratio ratio-1x1">
+              <img
+                src="https://m.media-amazon.com/images/I/61ULAZmt9NL.jpg"
+                class="rounded-top"
+                alt="Sony WH-1000XM5 Headphones"
+              />
+            </div>
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="card-title">Sony WH-1000XM5</h3>
+                <p class="card-text text-secondary">Model: WH1000XM5/B</p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <span class="fw-bold fs-5">$399.99</span>
+                <button class="btn btn-primary btn-sm">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Product 4: Apple MacBook Air M3 -->
+        <div class="col">
+          <div class="card glassy h-100">
+            <div class="ratio ratio-1x1">
+              <img
+                src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/mba13-m4-starlight-gallery1-202503?wid=4000&hei=3074&fmt=jpeg&qlt=90&.v=M3FncHRXbzk2aW81SGJ4dGl3RkhYN1I4SUd6cTA2cW05L2pUc2hLUWF1VVFxZVMxZjFibGdHQnBMUGNVNHZRT3ZHN1BnNThqSmZXZnd0bm8zbnRmaEVDYmJTeTQwQ3NqSnpJTm1UeXJuY2ltU0wwOWFlNC9WZEo1aGhnOGVXSGU"
+                class="rounded-top"
+                alt="Apple MacBook Air M3"
+              />
+            </div>
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="card-title">Apple MacBook Air M3</h3>
+                <p class="card-text text-secondary">Model: Z1600005C</p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <span class="fw-bold fs-5">$1,099.00</span>
+                <button class="btn btn-primary btn-sm">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Product 5: Dell XPS 15 -->
+        <div class="col">
+          <div class="card glassy h-100">
+            <div class="ratio ratio-1x1">
+              <img
+                src="https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/20030547/mchin_180905_4061_0009.jpg?quality=90&strip=all&crop=0,0,100,100"
+                class="rounded-top"
+                alt="Dell XPS 15"
+              />
+            </div>
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="card-title">Dell XPS 15</h3>
+                <p class="card-text text-secondary">Model: 9530</p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <span class="fw-bold fs-5">$1,899.00</span>
+                <button class="btn btn-primary btn-sm">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Product 6: Nintendo Switch OLED -->
+        <div class="col">
+          <div class="card glassy h-100">
+            <div class="ratio ratio-1x1">
+              <img
+                src="https://m.media-amazon.com/images/I/61nqNujSF2L._SL1330_.jpg"
+                class="rounded-top"
+                alt="Nintendo Switch OLED"
+              />
+            </div>
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="card-title">Nintendo Switch OLED</h3>
+                <p class="card-text text-secondary">Model: HEG-001</p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <span class="fw-bold fs-5">$349.99</span>
+                <button class="btn btn-primary btn-sm">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Product 7: Google Pixel 8 Pro -->
+        <div class="col">
+          <div class="card glassy h-100">
+            <div class="ratio ratio-1x1">
+              <img
+                src="https://www.cnet.com/a/img/resize/15b0aa42f7b739ed38f55319743132ea9d39d96e/hub/2025/08/13/e2798fcd-334b-4d06-8c61-f65eb9b57f1e/google-pixel-10-pro-xl-review-cnet-lanxon-21.jpg?auto=webp&fit=crop&height=1200&width=1200"
+                class="rounded-top"
+                alt="Google Pixel 8 Pro"
+              />
+            </div>
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="card-title">Google Pixel 10 Pro XL</h3>
+                <p class="card-text text-secondary">Model: GUL82</p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <span class="fw-bold fs-5">$999.00</span>
+                <button class="btn btn-primary btn-sm">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Product 8: Bose QuietComfort Earbuds II -->
+        <div class="col">
+          <div class="card glassy h-100">
+            <div class="ratio ratio-1x1">
+              <img
+                src="https://m.media-amazon.com/images/I/61OjFJ2p1nL._AC_UF894,1000_QL80_.jpg"
+                class="rounded-top"
+                alt="Bose QuietComfort Earbuds II"
+              />
+            </div>
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="card-title">Bose QuietComfort Earbuds II</h3>
+                <p class="card-text text-secondary">Model: 870730-0010</p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <span class="fw-bold fs-5">$279.00</span>
+                <button class="btn btn-primary btn-sm">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Product 9: LG C3 OLED TV -->
+        <div class="col">
+          <div class="card glassy h-100">
+            <div class="ratio ratio-1x1">
+              <img
+                src="https://s.yimg.com/ny/api/res/1.2/Wo55liMofPg.KonUt4z_RA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD02OTg-/https://media.zenfs.com/en/what_hi_fi_263/5efd67d151ae98ea032b3e6f4c02c7af"
+                class="rounded-top"
+                alt="LG C3 OLED TV"
+              />
+            </div>
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="card-title">LG C3 OLED TV</h3>
+                <p class="card-text text-secondary">Model: OLED55C3PUA</p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <span class="fw-bold fs-5">$1,499.00</span>
+                <button class="btn btn-primary btn-sm">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Product 10: Dyson V15 Detect Absolute -->
+        <div class="col">
+          <div class="card glassy h-100">
+            <div class="ratio ratio-1x1">
+              <img
+                src="https://www.central.co.th/_next/image?url=https%3A%2F%2Fassets.central.co.th%2Ffile-assets%2FCDSPIM%2Fweb%2FImage%2FCDS9170%2FDYSON-DysonV15Detect%E2%84%A2AbsoluteVacuumCleaner-CDS91707574-2.webp&w=1080&q=75"
+                class="rounded-top"
+                alt="Dyson V15 Detect Absolute"
+              />
+            </div>
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="card-title">Dyson V15 Detect Absolute</h3>
+                <p class="card-text text-secondary">Model: 394486-01</p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <span class="fw-bold fs-5">$749.00</span>
+                <button class="btn btn-primary btn-sm">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Product 11: Instant Pot Duo Crisp -->
+        <div class="col">
+          <div class="card glassy h-100">
+            <div class="ratio ratio-1x1">
+              <img
+                src="https://m.media-amazon.com/images/I/81vc3qXKPpL.jpg"
+                class="rounded-top"
+                alt="Instant Pot Duo Crisp"
+              />
+            </div>
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="card-title">Instant Pot Duo Crisp</h3>
+                <p class="card-text text-secondary">Model: 113-0047-01</p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <span class="fw-bold fs-5">$199.99</span>
+                <button class="btn btn-primary btn-sm">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Product 12: Vitamix Ascent A3500 -->
+        <div class="col">
+          <div class="card glassy h-100">
+            <div class="ratio ratio-1x1">
+              <img
+                src="https://assets.wsimgs.com/wsimgs/rk/images/dp/wcm/202537/0005/vitamix-a3500-ascent-series-blender-o.jpg"
+                class="rounded-top"
+                alt="Vitamix Ascent A3500"
+              />
+            </div>
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="card-title">Vitamix Ascent A3500</h3>
+                <p class="card-text text-secondary">Model: 067470</p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <span class="fw-bold fs-5">$599.95</span>
+                <button class="btn btn-primary btn-sm">Add to Cart</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <!-- Product 2 -->
-      <div class="col">
-        <div class="card glassy h-100">
-          <div class="ratio ratio-1x1">
-            <img src="https://picsum.photos/seed/p2/800/800" class="rounded-top" alt="Product 2" />
-          </div>
-          <div class="card-body d-flex align-items-center justify-content-between">
-            <h2 class="card-title">Nimbus Backpack</h2>
-          </div>
-        </div>
-      </div>
-      <!-- Product 3 -->
-      <div class="col">
-        <div class="card glassy h-100">
-          <div class="ratio ratio-1x1">
-            <img src="https://picsum.photos/seed/p3/800/800" class="rounded-top" alt="Product 3" />
-          </div>
-          <div class="card-body d-flex align-items-center justify-content-between">
-            <h2 class="card-title">Prism Sunglasses</h2>
-          </div>
-        </div>
-      </div>
-      <!-- Product 4 -->
-      <div class="col">
-        <div class="card glassy h-100">
-          <div class="ratio ratio-1x1">
-            <img src="https://picsum.photos/seed/p4/800/800" class="rounded-top" alt="Product 4" />
-          </div>
-          <div class="card-body d-flex align-items-center justify-content-between">
-            <h2 class="card-title">Eclipse Smartwatch</h2>
-          </div>
-        </div>
-      </div>
-      <!-- Product 5 -->
-      <div class="col">
-        <div class="card glassy h-100">
-          <div class="ratio ratio-1x1">
-            <img src="https://picsum.photos/seed/p5/800/800" class="rounded-top" alt="Product 5" />
-          </div>
-          <div class="card-body d-flex align-items-center justify-content-between">
-            <h2 class="card-title">Vertex Sneakers</h2>
-          </div>
-        </div>
-      </div>
-      <!-- Product 6 -->
-      <div class="col">
-        <div class="card glassy h-100">
-          <div class="ratio ratio-1x1">
-            <img src="https://picsum.photos/seed/p6/800/800" class="rounded-top" alt="Product 6" />
-          </div>
-          <div class="card-body d-flex align-items-center justify-content-between">
-            <h2 class="card-title">Halo Desk Lamp</h2>
-          </div>
-        </div>
-      </div>
-      <!-- Product 7 -->
-      <div class="col">
-        <div class="card glassy h-100">
-          <div class="ratio ratio-1x1">
-            <img src="https://picsum.photos/seed/p7/800/800" class="rounded-top" alt="Product 7" />
-          </div>
-          <div class="card-body d-flex align-items-center justify-content-between">
-            <h2 class="card-title">Flux Water Bottle</h2>
-          </div>
-        </div>
-      </div>
-      <!-- Product 8 -->
-      <div class="col">
-        <div class="card glassy h-100">
-          <div class="ratio ratio-1x1">
-            <img src="https://picsum.photos/seed/p8/800/800" class="rounded-top" alt="Product 8" />
-          </div>
-          <div class="card-body d-flex align-items-center justify-content-between">
-            <h2 class="card-title">Orbit Bluetooth Speaker</h2>
-          </div>
-        </div>
-      </div>
-      <!-- Product 9 -->
-      <div class="col">
-        <div class="card glassy h-100">
-          <div class="ratio ratio-1x1">
-            <img src="https://picsum.photos/seed/p9/800/800" class="rounded-top" alt="Product 9" />
-          </div>
-          <div class="card-body d-flex align-items-center justify-content-between">
-            <h2 class="card-title">Zen Yoga Mat</h2>
-          </div>
-        </div>
-      </div>
-      <!-- Product 10 -->
-      <div class="col">
-        <div class="card glassy h-100">
-          <div class="ratio ratio-1x1">
-            <img src="https://picsum.photos/seed/p10/800/800" class="rounded-top" alt="Product 10" />
-          </div>
-          <div class="card-body d-flex align-items-center justify-content-between">
-            <h2 class="card-title">Peak Trail Jacket</h2>
-          </div>
-        </div>
-      </div>
-      <!-- Product 11 -->
-      <div class="col">
-        <div class="card glassy h-100">
-          <div class="ratio ratio-1x1">
-            <img src="https://picsum.photos/seed/p11/800/800" class="rounded-top" alt="Product 11" />
-          </div>
-          <div class="card-body d-flex align-items-center justify-content-between">
-            <h2 class="card-title">Volt Phone Case</h2>
-          </div>
-        </div>
-      </div>
-      <!-- Product 12 -->
-      <div class="col">
-        <div class="card glassy h-100">
-          <div class="ratio ratio-1x1">
-            <img src="https://picsum.photos/seed/p12/800/800" class="rounded-top" alt="Product 12" />
-          </div>
-          <div class="card-body d-flex align-items-center justify-content-between">
-            <h2 class="card-title">Atlas Travel Mug</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
+    </main>
 
-  <footer class="py-5 border-top border-light-subtle">
-    <div class="container text-center text-secondary">
-      <small>&copy; <span id="year"></span> Shop Until You Drop</small>
-    </div>
-  </footer>
+    <footer class="py-5 border-top border-light-subtle">
+      <div class="container text-center text-secondary">
+        <small>
+          &copy;
+          <span id="year"></span>
+          Shop Until You Drop
+        </small>
+      </div>
+    </footer>
 
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-tRBM3gwieH9S4oWcD2Qf3mQJMtT1i9c+1aRWzCjG8bOQY+S8a2TNn1yM0LxJr1QY"
-    crossorigin="anonymous"
-  ></script>
-  <script>
-    // Footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // Footer year
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>

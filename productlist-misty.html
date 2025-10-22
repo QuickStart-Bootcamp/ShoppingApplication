@@ -4,366 +4,360 @@
   <meta charset="utf-8">
   <title>Product List – Misty</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link href="./styles.css" rel="stylesheet">
 </head>
 <body>
+  
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- NAV -->
-  <nav class="nav">
+  
+  <header class="nav" role="banner">
     <div class="container nav-inner">
-      <div class="brand">
-        <div class="brand-badge">BK</div>
-        <span>Book Shop</span>
-      </div>
-      <div class="nav-right">
-        <a class="cart" href="#">
-          <!-- cart icon (SVG, no JS) -->
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <a class="brand" href="#" aria-label="Book Shop home">
+        
+        <span class="brand-badge" aria-hidden="true">BK</span>
+        <span class="brand-name">Book Shop</span>
+      </a>
+      <nav class="nav-right" aria-label="Primary">
+        <a class="cart" href="#" aria-label="View cart">
+       
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
             <circle cx="9" cy="21" r="1"></circle>
             <circle cx="20" cy="21" r="1"></circle>
             <path d="M1 1h4l2.68 12.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
           </svg>
           <span>Cart</span>
         </a>
-      </div>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <!-- MAIN -->
-  <main class="container">
+  
+  <main id="main" class="container" tabindex="-1">
     <h1 style="margin:1rem 0 .75rem">Product List (Misty)</h1>
     <p style="margin:0 0 1.2rem;color:#555">Hover to preview; click any cover for details.</p>
 
-    <section class="grid">
-
+    <section class="grid" aria-label="Books">
       <!-- CARD 1 -->
-      <article class="card">
-        <a class="media" href="#book1" aria-label="Open Book 1 details">
-          <img src="images/ace.jpg" alt="Book 1 cover (Ace of Spades)">
+      <article class="card">    
+        <a class="media" href="#book1" aria-label="Open details for Ace of Spades">
+          <img loading="lazy" decoding="async" src="images/ace.jpg" alt="Cover of Ace of Spades">
         </a>
         <div class="info">
-          <div class="title">Ace Of Spades</div>
-          <div class="price">$11.86</div>
+          <h2 class="title">Ace of Spades</h2>
+          <div class="price" aria-label="Price 11 dollars and 86 cents">$11.86</div>
           <div class="inline-actions">
             <a class="btn" href="#book1">View</a>
-            <a class="btn" href="#">Add to Cart</a>
+            <button class="btn" type="button">Add to Cart</button>
           </div>
         </div>
       </article>
 
       <!-- CARD 2 -->
       <article class="card">
-        <a class="media" href="#book2" aria-label="Open Book 2 details">
-          <img src="images/atlaspaper.jpg" alt="Book 2 cover (The Atlas Six)">
+        <a class="media" href="#book2" aria-label="Open details for The Atlas Six">
+          <img loading="lazy" decoding="async" src="images/atlaspaper.jpg" alt="Cover of The Atlas Six">
         </a>
         <div class="info">
-          <div class="title">The Atlas Six</div>
+          <h2 class="title">The Atlas Six</h2>
           <div class="price">$18.99</div>
           <div class="inline-actions">
             <a class="btn" href="#book2">View</a>
-            <a class="btn" href="#">Add to Cart</a>
+            <button class="btn" type="button">Add to Cart</button>
           </div>
         </div>
       </article>
 
       <!-- CARD 3 -->
       <article class="card">
-        <a class="media" href="#book3" aria-label="Open Book 3 details">
-          <img src="images/cemetery.jpg" alt="Book 3 cover (Cemetery Boys)">
+        <a class="media" href="#book3" aria-label="Open details for Cemetery Boys">
+          <img loading="lazy" decoding="async" src="images/cemetery.jpg" alt="Cover of Cemetery Boys">
         </a>
         <div class="info">
-          <div class="title">Cemetery Boys</div>
+          <h2 class="title">Cemetery Boys</h2>
           <div class="price">$12.99</div>
           <div class="inline-actions">
             <a class="btn" href="#book3">View</a>
-            <a class="btn" href="#">Add to Cart</a>
+            <button class="btn" type="button">Add to Cart</button>
           </div>
         </div>
       </article>
 
       <!-- CARD 4 -->
       <article class="card">
-        <a class="media" href="#book4" aria-label="Open Book 4 details">
-          <img src="images/crowpaper.jpg" alt="Book 4 cover (Six of Crows)">
+        <a class="media" href="#book4" aria-label="Open details for Six of Crows">
+          <img loading="lazy" decoding="async" src="images/crowpaper.jpg" alt="Cover of Six of Crows">
         </a>
         <div class="info">
-          <div class="title">Six Of Crows</div>
+          <h2 class="title">Six of Crows</h2>
           <div class="price">$17.48</div>
           <div class="inline-actions">
             <a class="btn" href="#book4">View</a>
-            <a class="btn" href="#">Add to Cart</a>
+            <button class="btn" type="button">Add to Cart</button>
           </div>
         </div>
       </article>
 
       <!-- CARD 5 -->
       <article class="card">
-        <a class="media" href="#book5" aria-label="Open Book 5 details">
-          <img src="images/land.jpg" alt="Book 5 cover (The Land of Stories)">
+        <a class="media" href="#book5" aria-label="Open details for The Land of Stories: The Wishing Spell">
+          <img loading="lazy" decoding="async" src="images/land.jpg" alt="Cover of The Land of Stories: The Wishing Spell">
         </a>
         <div class="info">
-          <div class="title">The Land OF Stories</div>
+          <h2 class="title">The Land of Stories</h2>
           <div class="price">$8.91</div>
           <div class="inline-actions">
             <a class="btn" href="#book5">View</a>
-            <a class="btn" href="#">Add to Cart</a>
+            <button class="btn" type="button">Add to Cart</button>
           </div>
         </div>
       </article>
 
       <!-- CARD 6 -->
       <article class="card">
-        <a class="media" href="#book6" aria-label="Open Book 6 details">
-          <img src="images/night.jpg" alt="Book 6 cover (The Night and The Moon)">
+        <a class="media" href="#book6" aria-label="Open details for The Night and Its Moon">
+          <img loading="lazy" decoding="async" src="images/night.jpg" alt="Cover of The Night and Its Moon">
         </a>
         <div class="info">
-          <div class="title">The Night and The Moon</div>
+          <h2 class="title">The Night and Its Moon</h2>
           <div class="price">$6.99</div>
           <div class="inline-actions">
             <a class="btn" href="#book6">View</a>
-            <a class="btn" href="#">Add to Cart</a>
+            <button class="btn" type="button">Add to Cart</button>
           </div>
         </div>
       </article>
 
       <!-- CARD 7 -->
       <article class="card">
-        <a class="media" href="#book7" aria-label="Open Book 7 details">
-          <img src="images/songpaper.jpg" alt="Book 7 cover (The Song of Achilles)">
+        <a class="media" href="#book7" aria-label="Open details for The Song of Achilles">
+          <img loading="lazy" decoding="async" src="images/songpaper.jpg" alt="Cover of The Song of Achilles">
         </a>
         <div class="info">
-          <div class="title">The Song of Achilles</div>
+          <h2 class="title">The Song of Achilles</h2>
           <div class="price">$9.69</div>
           <div class="inline-actions">
             <a class="btn" href="#book7">View</a>
-            <a class="btn" href="#">Add to Cart</a>
+            <button class="btn" type="button">Add to Cart</button>
           </div>
         </div>
       </article>
 
       <!-- CARD 8 -->
       <article class="card">
-        <a class="media" href="#book8" aria-label="Open Book 8 details">
-          <img src="images/verity.jpg" alt="Book 8 cover (Verity)">
+        <a class="media" href="#book8" aria-label="Open details for Verity">
+          <img loading="lazy" decoding="async" src="images/verity.jpg" alt="Cover of Verity">
         </a>
         <div class="info">
-          <div class="title">Verity</div>
+          <h2 class="title">Verity</h2>
           <div class="price">$12.99</div>
           <div class="inline-actions">
             <a class="btn" href="#book8">View</a>
-            <a class="btn" href="#">Add to Cart</a>
+            <button class="btn" type="button">Add to Cart</button>
           </div>
         </div>
       </article>
 
       <!-- CARD 9 -->
       <article class="card">
-        <a class="media" href="#book9" aria-label="Open Book 9 details">
-          <img src="images/whatoncebook.jpg" alt="Book 9 cover (What Once Was Mine)">
+        <a class="media" href="#book9" aria-label="Open details for What Once Was Mine">
+          <img loading="lazy" decoding="async" src="images/whatoncebook.jpg" alt="Cover of What Once Was Mine">
         </a>
         <div class="info">
-          <div class="title">What Once Was Mine</div>
+          <h2 class="title">What Once Was Mine</h2>
           <div class="price">$10.44</div>
           <div class="inline-actions">
             <a class="btn" href="#book9">View</a>
-            <a class="btn" href="#">Add to Cart</a>
+            <button class="btn" type="button">Add to Cart</button>
           </div>
         </div>
       </article>
-
     </section>
   </main>
 
-  <!-- DETAIL OVERLAYS (one per book; opens like a new page) -->
-  <!-- Tip: link to # (empty hash) or any non-matching hash to close -->
-  <!-- BOOK 1 -->
   <section id="book1" class="overlay" aria-hidden="true">
-    <div class="modal">
-      <a class="close" href="#" aria-label="Close">✕</a>
-      <div class="modal-media"><img src="images/ace.jpg" alt="Book 1 cover"></div>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="b1-title">
+      <a class="close" href="#" aria-label="Close details">✕</a>
+      <div class="modal-media"><img src="images/ace.jpg" alt=""></div>
       <div class="modal-body">
-        <h2>Ace Of Spades</h2>
+        <h2 id="b1-title">Ace of Spades</h2>
         <div class="price" style="font-weight:600">$11.86</div>
-        <p class="desc">Ace of Spades by Faridah Àbíké-Íyímídé is a young adult thriller about two Black students, Devon and Chiamaka, at an elite private school who are targeted by an anonymous bully named \"Aces\" who exposes their secrets. </p>
-        <div class="options">
+        <p class="desc">Ace of Spades by Faridah Àbíké-Íyímídé is a young adult thriller about two Black students, Devon and Chiamaka, at an elite private school who are targeted by an anonymous bully named "Aces" who exposes their secrets.</p>
+        <fieldset class="options">
+          <legend class="sr-only">Format</legend>
           <div class="option-row">
-            <strong>Format:</strong>
             <label><input type="radio" name="format1" checked> Paperback</label>
             <label><input type="radio" name="format1"> Hardcover</label>
           </div>
-        </div>
-        <a class="btn" href="#">Add to Cart</a>
+        </fieldset>
+        <button class="btn" type="button">Add to Cart</button>
       </div>
     </div>
   </section>
 
-  <!-- BOOK 2 -->
   <section id="book2" class="overlay" aria-hidden="true">
-    <div class="modal">
-      <a class="close" href="#" aria-label="Close">✕</a>
-      <div class="modal-media"><img src="images/atlaspaper.jpg" alt="Book 2 cover"></div>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="b2-title">
+      <a class="close" href="#" aria-label="Close details">✕</a>
+      <div class="modal-media"><img src="images/atlaspaper.jpg" alt=""></div>
       <div class="modal-body">
-        <h2>The Atlas Six</h2>
+        <h2 id="b2-title">The Atlas Six</h2>
         <div class="price" style="font-weight:600">$18.99</div>
-        <p class="desc">The book The Atlas Six is a dark academic fantasy by author Olivie Blake. The story centers on six uniquely talented magicians recruited to join the prestigious Alexandrian Society, a secret organization that guards lost knowledge from ancient civilizations. </p>
-        <div class="options">
+        <p class="desc">The Atlas Six is a dark academic fantasy by Olivie Blake. Six uniquely talented magicians are recruited to join the prestigious Alexandrian Society, a secret organization that guards lost knowledge from ancient civilizations.</p>
+        <fieldset class="options">
+          <legend class="sr-only">Format</legend>
           <div class="option-row">
-            <strong>Format:</strong>
             <label><input type="radio" name="format2" checked> Paperback</label>
             <label><input type="radio" name="format2"> Hardcover</label>
           </div>
-        </div>
-        <a class="btn" href="#">Add to Cart</a>
+        </fieldset>
+        <button class="btn" type="button">Add to Cart</button>
       </div>
     </div>
   </section>
 
-  <!-- BOOK 3 -->
   <section id="book3" class="overlay" aria-hidden="true">
-    <div class="modal">
-      <a class="close" href="#" aria-label="Close">✕</a>
-      <div class="modal-media"><img src="images/cemetery.jpg" alt="Book 3 cover"></div>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="b3-title">
+      <a class="close" href="#" aria-label="Close details">✕</a>
+      <div class="modal-media"><img src="images/cemetery.jpg" alt=""></div>
       <div class="modal-body">
-        <h2>Cemetery Boys</h2>
+        <h2 id="b3-title">Cemetery Boys</h2>
         <div class="price" style="font-weight:600">$12.99</div>
-        <p class="desc">Cemetery Boys is a young adult paranormal fantasy novel by Aiden Thomas about Yadriel, a transgender Latinx boy who, to prove himself as a brujo, accidentally summons the ghost of a recently deceased boy named Julian. </p>
-        <div class="options">
+        <p class="desc">Cemetery Boys is a young adult paranormal fantasy by Aiden Thomas about Yadriel, a transgender Latinx boy who, to prove himself as a brujo, accidentally summons the ghost of a recently deceased boy named Julian.</p>
+        <fieldset class="options">
+          <legend class="sr-only">Format</legend>
           <div class="option-row">
-            <strong>Format:</strong>
             <label><input type="radio" name="format3" checked> Paperback</label>
             <label><input type="radio" name="format3"> Hardcover</label>
           </div>
-        </div>
-        <a class="btn" href="#">Add to Cart</a>
+        </fieldset>
+        <button class="btn" type="button">Add to Cart</button>
       </div>
     </div>
   </section>
 
-  <!-- BOOK 4 -->
   <section id="book4" class="overlay" aria-hidden="true">
-    <div class="modal">
-      <a class="close" href="#" aria-label="Close">✕</a>
-      <div class="modal-media"><img src="images/crowpaper.jpg" alt="Book 4 cover"></div>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="b4-title">
+      <a class="close" href="#" aria-label="Close details">✕</a>
+      <div class="modal-media"><img src="images/crowpaper.jpg" alt=""></div>
       <div class="modal-body">
-        <h2>Six of Crows</h2>
+        <h2 id="b4-title">Six of Crows</h2>
         <div class="price" style="font-weight:600">$17.48</div>
-        <p class="desc">Six of Crows is a young adult fantasy novel by Leigh Bardugo, set in the Grishaverse, about a gang of six outcasts hired to perform a seemingly impossible heist to kidnap a scientist and steal his groundbreaking invention. </p>
-        <div class="options">
+        <p class="desc">Six of Crows is a young adult fantasy novel by Leigh Bardugo set in the Grishaverse, about a gang of six outcasts hired to perform an impossible heist.</p>
+        <fieldset class="options">
+          <legend class="sr-only">Format</legend>
           <div class="option-row">
-            <strong>Format:</strong>
             <label><input type="radio" name="format4" checked> Paperback</label>
             <label><input type="radio" name="format4"> Hardcover</label>
           </div>
-        </div>
-        <a class="btn" href="#">Add to Cart</a>
+        </fieldset>
+        <button class="btn" type="button">Add to Cart</button>
       </div>
     </div>
   </section>
 
-  <!-- BOOK 5 -->
   <section id="book5" class="overlay" aria-hidden="true">
-    <div class="modal">
-      <a class="close" href="#" aria-label="Close">✕</a>
-      <div class="modal-media"><img src="images/land.jpg" alt="Book 5 cover"></div>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="b5-title">
+      <a class="close" href="#" aria-label="Close details">✕</a>
+      <div class="modal-media"><img src="images/land.jpg" alt=""></div>
       <div class="modal-body">
-        <h2>The Land Of Stories: The Wishing Spell</h2>
+        <h2 id="b5-title">The Land of Stories: The Wishing Spell</h2>
         <div class="price" style="font-weight:600">$8.91</div>
-        <p class="desc">The Land of Stories: The Wishing Spell is the first book in the series by Chris Colfer, which follows twins Alex and Conner Bailey as they fall into a magical fairy-tale world through a book from their grandmother. </p>
-        <div class="options">
+        <p class="desc">The Land of Stories: The Wishing Spell is the first book in the series by Chris Colfer, following twins Alex and Conner Bailey as they fall into a magical fairy-tale world through a book from their grandmother.</p>
+        <fieldset class="options">
+          <legend class="sr-only">Format</legend>
           <div class="option-row">
-            <strong>Format:</strong>
             <label><input type="radio" name="format5" checked> Paperback</label>
             <label><input type="radio" name="format5"> Hardcover</label>
           </div>
-        </div>
-        <a class="btn" href="#">Add to Cart</a>
+        </fieldset>
+        <button class="btn" type="button">Add to Cart</button>
       </div>
     </div>
   </section>
 
-  <!-- BOOK 6 -->
   <section id="book6" class="overlay" aria-hidden="true">
-    <div class="modal">
-      <a class="close" href="#" aria-label="Close">✕</a>
-      <div class="modal-media"><img src="images/night.jpg" alt="Book 6 cover"></div>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="b6-title">
+      <a class="close" href="#" aria-label="Close details">✕</a>
+      <div class="modal-media"><img src="images/night.jpg" alt=""></div>
       <div class="modal-body">
-        <h2>The Night and The Moon</h2>
+        <h2 id="b6-title">The Night and Its Moon</h2>
         <div class="price" style="font-weight:600">$6.99</div>
-        <p class="desc">The Night and Its Moon is a fantasy romance book by Piper CJ that follows two orphaned girls, Nox and Amaris, who are separated and must navigate a world of magic, war, and political intrigue to reunite. The story explores their individual journeys as they develop powers and form new alliances, all while being driven by their deep bond and love for one another.</p>
-        <div class="options">
+        <p class="desc">The Night and Its Moon is a fantasy romance by Piper CJ about two orphans, Nox and Amaris, who are separated and must navigate a world of magic, war, and intrigue to reunite.</p>
+        <fieldset class="options">
+          <legend class="sr-only">Format</legend>
           <div class="option-row">
-            <strong>Format:</strong>
             <label><input type="radio" name="format6" checked> Paperback</label>
             <label><input type="radio" name="format6"> Hardcover</label>
           </div>
-        </div>
-        <a class="btn" href="#">Add to Cart</a>
+        </fieldset>
+        <button class="btn" type="button">Add to Cart</button>
       </div>
     </div>
   </section>
 
-  <!-- BOOK 7 -->
   <section id="book7" class="overlay" aria-hidden="true">
-    <div class="modal">
-      <a class="close" href="#" aria-label="Close">✕</a>
-      <div class="modal-media"><img src="images/book7.jpg" alt="Book 7 cover"></div>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="b7-title">
+      <a class="close" href="#" aria-label="Close details">✕</a>
+      <div class="modal-media"><img src="images/songpaper.jpg" alt=""></div>
       <div class="modal-body">
-        <h2>The Song of Achilles</h2>
+        <h2 id="b7-title">The Song of Achilles</h2>
         <div class="price" style="font-weight:600">$9.69</div>
-        <p class="desc">The Song of Achilles is a 2011 novel by Madeline Miller that retells the story of the Greek hero Achilles and the Trojan War, focusing on the romantic relationship between Achilles and Patroclus.</p>
-        <div class="options">
+        <p class="desc">The Song of Achilles (2011) by Madeline Miller retells the story of Achilles and the Trojan War, focusing on the relationship between Achilles and Patroclus.</p>
+        <fieldset class="options">
+          <legend class="sr-only">Format</legend>
           <div class="option-row">
-            <strong>Format:</strong>
             <label><input type="radio" name="format7" checked> Paperback</label>
             <label><input type="radio" name="format7"> Hardcover</label>
           </div>
-        </div>
-        <a class="btn" href="#">Add to Cart</a>
+        </fieldset>
+        <button class="btn" type="button">Add to Cart</button>
       </div>
     </div>
   </section>
 
-  <!-- BOOK 8 -->
   <section id="book8" class="overlay" aria-hidden="true">
-    <div class="modal">
-      <a class="close" href="#" aria-label="Close">✕</a>
-      <div class="modal-media"><img src="images/verity.jpg" alt="Book 8 cover"></div>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="b8-title">
+      <a class="close" href="#" aria-label="Close details">✕</a>
+      <div class="modal-media"><img src="images/verity.jpg" alt=""></div>
       <div class="modal-body">
-        <h2>Verity</h2>
+        <h2 id="b8-title">Verity</h2>
         <div class="price" style="font-weight:600">$12.99</div>
-        <p class="desc">Verity is a psychological thriller by Colleen Hoover about a struggling writer, Lowen, who is hired to complete a book series for a famous author, Verity Crawford. Lowen moves into the Crawford home to study Verity's notes, but she discovers a chilling autobiography filled with disturbing secrets about the family and their past tragedies. </p>
-        <div class="options">
+        <p class="desc">Verity is a psychological thriller by Colleen Hoover about Lowen, a struggling writer hired to complete a series for famed author Verity Crawford, who discovers a disturbing autobiography in the Crawfords' home.</p>
+        <fieldset class="options">
+          <legend class="sr-only">Format</legend>
           <div class="option-row">
-            <strong>Format:</strong>
             <label><input type="radio" name="format8" checked> Paperback</label>
             <label><input type="radio" name="format8"> Hardcover</label>
           </div>
-        </div>
-        <a class="btn" href="#">Add to Cart</a>
+        </fieldset>
+        <button class="btn" type="button">Add to Cart</button>
       </div>
     </div>
   </section>
 
-  <!-- BOOK 9 -->
   <section id="book9" class="overlay" aria-hidden="true">
-    <div class="modal">
-      <a class="close" href="#" aria-label="Close">✕</a>
-      <div class="modal-media"><img src="images/whatoncebook.jpg" alt="Book 9 cover"></div>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="b9-title">
+      <a class="close" href="#" aria-label="Close details">✕</a>
+      <div class="modal-media"><img src="images/whatoncebook.jpg" alt=""></div>
       <div class="modal-body">
-        <h2>What Once Was Mine</h2>
-        <div class="price" style="font-weight:600">$50.00</div>
-        <p class="desc">What Once Was Mine is a reimagined Tangled story from Liz Braswell's A Twisted Tale series, where Rapunzel's mother drinks from the Moondrop flower instead of the Sundrop flower, resulting in Rapunzel being born with silver hair that has dangerous, destructive powers instead of healing. </p>
-        <div class="options">
+        <h2 id="b9-title">What Once Was Mine</h2>
+        <div class="price" style="font-weight:600">$10.44</div>
+        <p class="desc">What Once Was Mine is a reimagined Tangled story from Liz Braswell's A Twisted Tale series in which Rapunzel's mother drinks from the Moondrop flower, giving Rapunzel dangerous silver-haired powers instead of healing.</p>
+        <fieldset class="options">
+          <legend class="sr-only">Format</legend>
           <div class="option-row">
-            <strong>Format:</strong>
             <label><input type="radio" name="format9" checked> Paperback</label>
             <label><input type="radio" name="format9"> Hardcover</label>
           </div>
-        </div>
-        <a class="btn" href="#">Add to Cart</a>
+        </fieldset>
+        <button class="btn" type="button">Add to Cart</button>
       </div>
     </div>
   </section>
 
+  <footer class="site-footer" role="contentinfo">
+    <div class="container small-muted">© 2025 Book Shop</div>
+  </footer>
 </body>
 </html>

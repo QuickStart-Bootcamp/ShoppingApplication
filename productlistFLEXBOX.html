@@ -1,46 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product List</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom Font */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* Slate 50 */
-        }
+      /* Custom Font */
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f8fafc; /* Slate 50 */
+      }
     </style>
-</head>
-<body>
-<header>
-        <nav class="Top-Nav">
-                <h3>   
-                <a href="./productlistBOOTSTRAP.html" >Boot Strap List</a>  |   <a href="./productlistFLEXBOX.html">Flex Box List</a>
-                </h3>        
-        </nav>
-                
-</header> 
-    <!-- banner -->
-    <div class="bg-white shadow-md p-4 sticky top-0 z-10">
-        <div class="container mx-auto">
-            <h1 class="text-3xl font-extrabold text-gray-800">
-                Todays Tech Deals
-            </h1>
-            <p class="text-sm text-gray-500 mt-1">
-                Hot items To make your home life easier today!
-            </p>
+  </head>
+  <body>
+    <header class="bg-gray-800 text-white p-4 shadow-lg">
+      <nav
+        class="Top-Nav container mx-auto flex justify-center items-center space-x-4"
+      >
+        <div class="dropdown">
+          <button
+            class="btn btn-dark dropdown-toggle"
+            type="button"
+            id="productListsDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Product Lists
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="productListsDropdown">
+            <li>
+              <a class="dropdown-item" href="./productlistFLEXBOX.html"
+                >Flex Box List</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="./productlistBOOTSTRAP.html"
+                >Boot Strap List</a
+              >
+            </li>
+          </ul>
         </div>
+        <span class="text-gray-500">|</span>
+        <a
+          href="./bestSeller.html"
+          class="text-lg font-medium hover:text-blue-400 transition duration-300"
+          >Best Seller</a
+        >
+        <span class="text-gray-500">|</span>
+        <a
+          href="./registration.html"
+          class="text-lg font-medium hover:text-blue-400 transition duration-300"
+          >Register</a
+        >
+        <span class="text-gray-500">|</span>
+        <div id="cart-link-container">
+          <a
+            href="./shoppingCart.html"
+            class="text-lg font-medium hover:text-blue-400 transition duration-300 relative"
+            >Shopping Cart
+            <span
+              id="cart-count"
+              class="absolute -top-2 -right-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full"
+              >0</span
+            ></a
+          >
+        </div>
+      </nav>
+    </header>
+    <!-- banner -->
+    <div
+      class="bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg p-6 sticky top-0 z-10"
+    >
+      <div class="container mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">
+          Todays Tech Deals
+        </h1>
+        <p class="text-sm md:text-lg text-white mt-1 drop-shadow-md">
+          Hot items To make your home life easier today!
+        </p>
+      </div>
     </div>
 
     <!-- Main Content Container -->
     <main class="container mx-auto p-6 md:p-12">
+      <h2 class="text-2xl font-semibold text-gray-700 mb-6 border-b pb-2">
+        Items to consider
+      </h2>
 
-        <h2 class="text-2xl font-semibold text-gray-700 mb-6 border-b pb-2">Items to consider</h2>
-
-        <!-- 
+      <!-- 
             FLEXBOX CONTAINER 
             
             - flex: Enables the flex container
@@ -49,39 +98,211 @@
             - gap-6: Adds space between items (6 units)
             - items-stretch: Ensures items fill the height of the container
         -->
-        <div class="flex flex-wrap justify-center gap-6">
-
-            <div class="flex-grow max-w-sm bg-indigo-600 text-white p-8 rounded-2xl shadow-xl transition transform hover:scale-[1.02] duration-300 w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)]">
-                <img src="./images/CoveHome.jpg">
-                <h3 class="font-bold mb-3">Cove Home Security</h3>
-                <p class="text-white-200 mb-4">
-                    $324.99
-                </p>
-                
-            </div>
-
-            
-            <div class="flex-grow max-w-sm bg-white border border-gray-200 p-8 rounded-2xl shadow-lg transition transform hover:shadow-2xl duration-300 w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)]">
-                <img src="./images/yalehome.jpeg">
-                <h3 class="font-bold text-gray-900 mb-3"> Yale Home Lock</h3>
-                <p class="text-gray-600 mb-4"> $299    </p>
-                
-            </div>
-
-            <div class="flex-grow max-w-sm bg-lime-500 text-gray-900 p-8 rounded-2xl shadow-xl transition transform hover:rotate-1 duration-300 w-full sm:w-full lg:w-[calc(33.333%-1.5rem)]">
-                <img src="./images/nest.jpeg">
-                <h3 class="font-bold mb-3">Nest Learning Thermostat</h3>
-                <p class="text-lime-900 mb-4"> $279 </p> 
-            </div>
-            
-            <div class="flex-grow max-w-sm bg-rose-500 text-white p-8 rounded-2xl shadow-xl transition transform hover:rotate-1 duration-300 w-full sm:w-full lg:w-[calc(33.333%-1.5rem)] ">
-                <img src="./images/starlink.jpg">
-                <h3 class="font-bold mb-3">Star Link Mini Kit</h3>
-                <p class="text-rose-200 mb-4">$299</p>
-            </div>
+      <div class="flex flex-wrap justify-center gap-6">
+        <div
+          class="flex-grow max-w-sm bg-indigo-600 text-white p-8 rounded-2xl shadow-xl transition transform hover:scale-105 hover:shadow-2xl duration-300 w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] flex flex-col justify-between"
+        >
+          <div class="relative">
+            <img
+              src="./images/CoveHome.jpg"
+              alt="Cove Home Security"
+              class="rounded-lg mb-4 w-full h-48 object-cover"
+            />
+            <span
+              class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow-md"
+              >New!</span
+            >
+            <h3 class="text-2xl font-bold mb-3">Cove Home Security</h3>
+            <p class="text-indigo-100 text-sm mb-4">
+              Secure your home with our top-rated smart security system.
+            </p>
+            <p class="text-indigo-100 text-2xl font-extrabold mb-4">$324.99</p>
+          </div>
+          <button
+            class="mt-4 bg-white text-indigo-700 font-bold py-2 px-4 rounded-full hover:bg-indigo-100 transition duration-300 add-to-cart-btn"
+            data-product-id="cove-home-security"
+            data-product-name="Cove Home Security"
+            data-product-price="324.99"
+            data-product-image="./images/CoveHome.jpg"
+          >
+            Add to Cart
+          </button>
         </div>
 
+        <div
+          class="flex-grow max-w-sm bg-white border border-gray-200 p-8 rounded-2xl shadow-lg transition transform hover:scale-105 hover:shadow-2xl duration-300 w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] flex flex-col justify-between"
+        >
+          <div>
+            <img
+              src="./images/yalehome.jpeg"
+              alt="Yale Home Lock"
+              class="rounded-lg mb-4 w-full h-48 object-cover"
+            />
+            <h3 class="text-2xl font-bold text-gray-900 mb-3">
+              Yale Home Lock
+            </h3>
+            <p class="text-gray-700 text-sm mb-4">
+              Keyless entry and smart home integration for ultimate convenience.
+            </p>
+            <p class="text-gray-700 text-2xl font-extrabold mb-4">$299</p>
+          </div>
+          <button
+            class="mt-4 bg-blue-600 text-white font-bold py-2 px-4 rounded-full hover:bg-blue-700 transition duration-300 add-to-cart-btn"
+            data-product-id="yale-home-lock"
+            data-product-name="Yale Home Lock"
+            data-product-price="299.00"
+            data-product-image="./images/yalehome.jpeg"
+          >
+            Add to Cart
+          </button>
+        </div>
+
+        <div
+          class="flex-grow max-w-sm bg-lime-500 text-gray-900 p-8 rounded-2xl shadow-xl transition transform hover:scale-105 hover:shadow-2xl duration-300 w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] flex flex-col justify-between"
+        >
+          <div>
+            <img
+              src="./images/nest.jpeg"
+              alt="Nest Learning Thermostat"
+              class="rounded-lg mb-4 w-full h-48 object-cover"
+            />
+            <h3 class="text-2xl font-bold mb-3">Nest Learning Thermostat</h3>
+            <p class="text-lime-900 text-sm mb-4">
+              Save energy and stay comfortable with intelligent temperature
+              control.
+            </p>
+            <p class="text-lime-900 text-2xl font-extrabold mb-4">$279</p>
+          </div>
+          <button
+            class="mt-4 bg-white text-lime-700 font-bold py-2 px-4 rounded-full hover:bg-lime-100 transition duration-300 add-to-cart-btn"
+            data-product-id="nest-thermostat"
+            data-product-name="Nest Learning Thermostat"
+            data-product-price="279.00"
+            data-product-image="./images/nest.jpeg"
+          >
+            Add to Cart
+          </button>
+        </div>
+
+        <div
+          class="flex-grow max-w-sm bg-rose-500 text-white p-8 rounded-2xl shadow-xl transition transform hover:scale-105 hover:shadow-2xl duration-300 w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)] flex flex-col justify-between"
+        >
+          <div>
+            <img
+              src="./images/starlink.jpg"
+              alt="Star Link Mini Kit"
+              class="rounded-lg mb-4 w-full h-48 object-cover"
+            />
+            <h3 class="text-2xl font-bold mb-3">Star Link Mini Kit</h3>
+            <p class="text-rose-100 text-sm mb-4">
+              Experience high-speed internet anywhere with this portable kit.
+            </p>
+            <p class="text-rose-100 text-2xl font-extrabold mb-4">$299</p>
+          </div>
+          <button
+            class="mt-4 bg-white text-rose-700 font-bold py-2 px-4 rounded-full hover:bg-rose-100 transition duration-300 add-to-cart-btn"
+            data-product-id="starlink-mini-kit"
+            data-product-name="Star Link Mini Kit"
+            data-product-price="299.00"
+            data-product-image="./images/starlink.jpg"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
     </main>
-    
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
+        const cartCountElement = document.getElementById("cart-count");
+        const cartLinkContainer = document.getElementById(
+          "cart-link-container"
+        );
+
+        let cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
+
+        const popover = new bootstrap.Popover(cartLinkContainer, {
+          container: "body",
+          html: true,
+          placement: "bottom",
+          trigger: "hover focus",
+          title: "Your Cart",
+          content: "Your cart is empty.",
+        });
+
+        function generatePopoverContent() {
+          if (cart.length === 0) {
+            return "<p class='p-2'>Your cart is empty.</p>";
+          }
+          let content = '<div class="list-group list-group-flush">';
+          let total = 0;
+          cart.forEach((item) => {
+            const itemTotal = item.price * item.quantity;
+            total += itemTotal;
+            content += `<div class="list-group-item d-flex justify-content-between align-items-center text-sm"><span>${
+              item.name
+            } x${item.quantity}</span> <span>$${itemTotal.toFixed(
+              2
+            )}</span></div>`;
+          });
+          content += `<div class="list-group-item d-flex justify-content-between align-items-center fw-bold"><span>Total</span> <span>$${total.toFixed(
+            2
+          )}</span></div>`;
+          content += "</div>";
+          return content;
+        }
+
+        function updateCartCount() {
+          const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+          if (cartCountElement) {
+            cartCountElement.textContent = totalItems;
+            cartCountElement.style.display =
+              totalItems > 0 ? "inline-block" : "none";
+          }
+          popover.setContent({
+            ".popover-body": generatePopoverContent(),
+          });
+        }
+
+        addToCartButtons.forEach((button) => {
+          button.addEventListener("click", (event) => {
+            const productId = event.target.dataset.productId;
+            const productName = event.target.dataset.productName;
+            const productPrice = parseFloat(event.target.dataset.productPrice);
+            const productImage = event.target.dataset.productImage;
+
+            const existingItem = cart.find((item) => item.id === productId);
+
+            if (existingItem) {
+              existingItem.quantity++;
+            } else {
+              cart.push({
+                id: productId,
+                name: productName,
+                price: productPrice,
+                image: productImage,
+                quantity: 1,
+              });
+            }
+
+            localStorage.setItem("shoppingCart", JSON.stringify(cart));
+            updateCartCount();
+            alert(`${productName} added to cart!`); // Simple feedback
+          });
+        });
+        updateCartCount(); // Initial count update on page load
+      });
+    </script>
+  </body>
+  <footer class="bg-gray-800 text-white p-6 text-center mt-12 shadow-inner">
+    <div class="container mx-auto">
+      <p>&copy; 2023 Todays Tech Deals. All rights reserved.</p>
+      <p class="text-sm text-gray-400 mt-2">Designed with Tailwind CSS</p>
+    </div>
+  </footer>
 </html>

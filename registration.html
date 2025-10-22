@@ -1,13 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f8fafc; /* Slate 50 */
+      }
+    </style>
+  </head>
 
-<body>
-  <h1>Registration</h1>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis recusandae voluptates ducimus, tempora esse rem distinctio ipsam molestias maiores eligendi dolorum porro nisi accusantium iure, fugit exercitationem tenetur deleniti soluta provident in deserunt corrupti, atque consequuntur. Maxime aspernatur iusto aliquam! Consequatur officiis tenetur eligendi adipisci consequuntur sed doloremque voluptatibus laboriosam error ipsum! Corporis odit tempore quae, molestiae quod voluptatum qui, repudiandae dolores, iure vero deleniti iste veniam quisquam molestias placeat voluptate nihil eveniet quas facilis voluptatibus quasi obcaecati id amet rem. Aliquid alias culpa facilis omnis laboriosam fugiat assumenda a esse impedit labore fugit, ea dolorem voluptas. Quisquam, officiis nostrum?</p>
-</body>
+  <body>
+    <header class="bg-gray-800 text-white p-4 shadow-lg">
+      <nav
+        class="Top-Nav container mx-auto flex justify-center items-center space-x-4"
+      >
+        <div class="dropdown">
+          <button
+            class="btn btn-dark dropdown-toggle"
+            type="button"
+            id="productListsDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Product Lists
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="productListsDropdown">
+            <li>
+              <a class="dropdown-item" href="./productlistFLEXBOX.html"
+                >Flex Box List</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="./productlistBOOTSTRAP.html"
+                >Boot Strap List</a
+              >
+            </li>
+          </ul>
+        </div>
+        <span class="text-gray-500">|</span>
+        <a
+          href="./bestSeller.html"
+          class="text-lg font-medium hover:text-blue-400 transition duration-300"
+          >Best Seller</a
+        >
+        <span class="text-gray-500">|</span>
+        <a
+          href="./registration.html"
+          class="text-lg font-medium hover:text-blue-400 transition duration-300"
+          >Register</a
+        >
+        <span class="text-gray-500">|</span>
+        <div id="cart-link-container">
+          <a
+            href="./shoppingCart.html"
+            class="text-lg font-medium hover:text-blue-400 transition duration-300 relative"
+            >Shopping Cart
+            <span
+              id="cart-count"
+              class="absolute -top-2 -right-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full"
+              >0</span
+            ></a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main class="container mx-auto p-6 md:p-12">
+      <div class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-xl">
+        <h1 class="text-3xl font-extrabold text-gray-800 mb-6 text-center">
+          Create Your Account
+        </h1>
+        <form>
+          <!-- Names -->
+          <div class="grid md:grid-cols-2 md:gap-6">
+            <div class="mb-4">
+              <label class="form-label font-bold text-gray-700" for="firstName"
+                >First Name</label
+              >
+              <input
+                class="form-control"
+                id="firstName"
+                type="text"
+                placeholder="John"
+                required
+              />
+            </div>
+            <div class="mb-4">
+              <label class="form-label font-bold text-gray-700" for="lastName"
+                >Last Name</label
+              >
+              <input
+                class="form-control"
+                id="lastName"
+                type="text"
+                placeholder="Doe"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="mb-4">
+            <label class="form-label font-bold text-gray-700" for="email"
+              >Email Address</label
+            >
+            <input
+              class="form-control"
+              id="email"
+              type="email"
+              placeholder="you@example.com"
+              required
+            />
+          </div>
+
+          <!-- Address -->
+          <div class="mb-4">
+            <label class="form-label font-bold text-gray-700" for="address"
+              >Street Address</label
+            >
+            <input
+              class="form-control"
+              id="address"
+              type="text"
+              placeholder="123 Main St"
+              required
+            />
+          </div>
+          <div class="grid md:grid-cols-3 md:gap-6">
+            <div class="mb-4">
+              <label class="form-label font-bold text-gray-700" for="city"
+                >City</label
+              >
+              <input
+                class="form-control"
+                id="city"
+                type="text"
+                placeholder="Anytown"
+                required
+              />
+            </div>
+            <div class="mb-4">
+              <label class="form-label font-bold text-gray-700" for="state"
+                >State</label
+              >
+              <input
+                class="form-control"
+                id="state"
+                type="text"
+                placeholder="CA"
+                required
+              />
+            </div>
+            <div class="mb-4">
+              <label class="form-label font-bold text-gray-700" for="zip"
+                >Zip Code</label
+              >
+              <input
+                class="form-control"
+                id="zip"
+                type="text"
+                placeholder="90210"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Passwords -->
+          <div class="grid md:grid-cols-2 md:gap-6">
+            <div class="mb-4">
+              <label class="form-label font-bold text-gray-700" for="password"
+                >Password</label
+              >
+              <input
+                class="form-control"
+                id="password"
+                type="password"
+                placeholder="******************"
+                required
+              />
+            </div>
+            <div class="mb-6">
+              <label
+                class="form-label font-bold text-gray-700"
+                for="confirm-password"
+                >Confirm Password</label
+              >
+              <input
+                class="form-control"
+                id="confirm-password"
+                type="password"
+                placeholder="******************"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="flex items-center justify-center">
+            <button
+              class="btn btn-primary w-full md:w-auto px-5 py-2 text-lg"
+              type="submit"
+            >
+              Register
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const cartCountElement = document.getElementById("cart-count");
+        const cartLinkContainer = document.getElementById(
+          "cart-link-container"
+        );
+
+        let cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
+
+        const popover = new bootstrap.Popover(cartLinkContainer, {
+          container: "body",
+          html: true,
+          placement: "bottom",
+          trigger: "hover focus",
+          title: "Your Cart",
+          content: "Your cart is empty.",
+        });
+
+        function generatePopoverContent() {
+          if (cart.length === 0) {
+            return "<p class='p-2'>Your cart is empty.</p>";
+          }
+          let content = '<div class="list-group list-group-flush">';
+          let total = 0;
+          cart.forEach((item) => {
+            const itemTotal = item.price * item.quantity;
+            total += itemTotal;
+            content += `<div class="list-group-item d-flex justify-content-between align-items-center text-sm"><span>${
+              item.name
+            } x${item.quantity}</span> <span>$${itemTotal.toFixed(
+              2
+            )}</span></div>`;
+          });
+          content += `<div class="list-group-item d-flex justify-content-between align-items-center fw-bold"><span>Total</span> <span>$${total.toFixed(
+            2
+          )}</span></div>`;
+          content += "</div>";
+          return content;
+        }
+
+        function updateCartCount() {
+          const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+          if (cartCountElement) {
+            cartCountElement.textContent = totalItems;
+            cartCountElement.style.display =
+              totalItems > 0 ? "inline-block" : "none";
+          }
+          popover.setContent({
+            ".popover-body": generatePopoverContent(),
+          });
+        }
+
+        updateCartCount();
+      });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+  <footer class="bg-gray-800 text-white p-6 text-center mt-12 shadow-inner">
+    <div class="container mx-auto">
+      <p>&copy; 2023 Todays Tech Deals. All rights reserved.</p>
+      <p class="text-sm text-gray-400 mt-2">
+        Designed with Bootstrap & Tailwind CSS
+      </p>
+    </div>
+  </footer>
 </html>

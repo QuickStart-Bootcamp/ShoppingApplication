@@ -8,4 +8,4 @@ Benjamin Rose
 2. CSS
 3. Javascript
 # Wireframe
-<img src="./images/wireframe.svg>
+![Alt text](./images/wireframe.svg "Wireframe")

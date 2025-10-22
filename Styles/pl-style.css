@@ -5,6 +5,24 @@
 }
 
 
+.bungee-spice-regular {
+  font-family: "Bungee Spice", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.shop-name {
+  font-size: 45px;
+  margin-left: 15px;
+}
+
+.product-box {
+  display: flex;
+  flex-direction: column;
+}
+
+
 .product-title {
   font-size: 20px;
   text-decoration: none;
@@ -19,7 +37,7 @@
 
 
 .product-img {
-  width: 250px;
+  width: calc(column);
   margin: 10px 0px;
 }
 
@@ -28,26 +46,14 @@
   margin: .25px 0px;
 }
 
-
-.product-list {
-  list-style: none;
-  display: flex;
-  flex-flow: row wrap;
-}
-
-
-.product {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: calc((100% - 5%) / 3);
-  padding-bottom: 75px;
-}
-
-
 .price {
   font-size: 30px;
   font-weight: 700;
 }
 
+
+.title {
+  display: flex;
+  margin-left: 100px;
+}
 

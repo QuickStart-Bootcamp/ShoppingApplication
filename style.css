@@ -594,3 +594,11 @@ body.light-mode .card.glassy,
 body.light-mode .card.glassy .card-title {
   color: #1a1a1a !important;  /* dark gray for light mode */
 }
+
+/* Tighten footer spacing on auth pages */
+footer { margin-top: 24px; }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .pw-bar { transition: none; }
+}

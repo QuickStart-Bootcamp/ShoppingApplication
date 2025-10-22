@@ -6,7 +6,7 @@ body {
     font-family: Arial, sans-serif;
     color: black;
     height: 100vh;
-    background-color: #f8f9fa;
+    background-color: #ffffff;
 }
 
 p {
@@ -60,16 +60,3 @@ ul {
 
     }
  }
-.socialMedia {
-    display:flex;
-    flex-direction:row;
-    align-content: center;
-    justify-content: center;
-    gap: 20px;
-    color: #343a40;
-    a {
-        text-decoration: none;
-        color: #343a40;
-        transition: color 0.3s ease;
-    }
-}

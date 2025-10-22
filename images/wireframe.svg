@@ -1,0 +1,45 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg" style="background-color:#f0f0f0; font-family: sans-serif; border: 1px solid #ccc;">
+    <title>Website Wireframe</title>
+    <desc>A basic wireframe showing the layout of the product list page.</desc>
+
+    <!-- Header -->
+    <rect x="0" y="0" width="800" height="50" fill="#d9d9d9" />
+    <text x="400" y="30" font-size="16" fill="#333" text-anchor="middle">Navigation Bar</text>
+
+    <!-- Banner -->
+    <rect x="50" y="70" width="700" height="100" fill="#e9e9e9" />
+    <text x="400" y="125" font-size="20" fill="#333" text-anchor="middle">Page Banner / Title</text>
+
+    <!-- Main Content Title -->
+    <text x="50" y="205" font-size="18" fill="#333">Section Title</text>
+    <line x1="50" y1="215" x2="750" y2="215" stroke="#999" stroke-width="1"/>
+
+    <!-- Product Grid -->
+    <g id="product-grid">
+        <!-- Product Card 1 -->
+        <g transform="translate(50, 240)">
+            <rect x="0" y="0" width="160" height="250" fill="#fff" stroke="#bbb" />
+            <rect x="10" y="10" width="140" height="100" fill="#eee" />
+            <text x="80" y="65" text-anchor="middle" fill="#666">Image</text>
+            <line x1="10" y1="130" x2="150" y2="130" stroke="#ccc" stroke-width="10" stroke-linecap="round" />
+            <line x1="10" y1="155" x2="120" y2="155" stroke="#ddd" stroke-width="8" stroke-linecap="round" />
+            <line x1="10" y1="170" x2="120" y2="170" stroke="#ddd" stroke-width="8" stroke-linecap="round" />
+            <rect x="10" y="200" width="140" height="40" rx="20" fill="#a0c4ff" />
+            <text x="80" y="225" text-anchor="middle" fill="#fff" font-size="14">Button</text>
+        </g>
+        <!-- Product Card 2 -->
+        <g transform="translate(230, 240)">
+            <rect x="0" y="0" width="160" height="250" fill="#fff" stroke="#bbb" />
+            <rect x="10" y="10" width="140" height="100" fill="#eee" />
+            <text x="80" y="65" text-anchor="middle" fill="#666">Image</text>
+            <line x1="10" y1="130" x2="150" y2="130" stroke="#ccc" stroke-width="10" stroke-linecap="round" />
+            <line x1="10" y1="155" x2="120" y2="155" stroke="#ddd" stroke-width="8" stroke-linecap="round" />
+            <line x1="10" y1="170" x2="120" y2="170" stroke="#ddd" stroke-width="8" stroke-linecap="round" />
+            <rect x="10" y="200" width="140" height="40" rx="20" fill="#a0c4ff" />
+            <text x="80" y="225" text-anchor="middle" fill="#fff" font-size="14">Button</text>
+        </g>
+        <!-- Product Card 3 & 4 (simplified) -->
+        <rect x="410" y="240" width="160" height="250" fill="#fff" stroke="#bbb" />
+        <rect x="590" y="240" width="160" height="250" fill="#fff" stroke="#bbb" />
+    </g>
+</svg>

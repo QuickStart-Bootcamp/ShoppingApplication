@@ -6,4 +6,5 @@ This is a **shopping** application ....
 1. Html
 2. CSS
 3. Javascript
-PHP
+# Wireframe
+<img src="./images/wireframe.svg>
